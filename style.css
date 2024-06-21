@@ -1,112 +1,65 @@
 /* General styles */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #1a1a1a; /* Dark background color */
-    color: #e6cccc; /* Pastel red text color */
+    margin: 0;
+    padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    box-sizing: border-box;
-    padding: 20px; /* Add padding to body */
+    min-height: 100vh;
+    background-color: #f0f0f0;
 }
 
 .container {
     text-align: center;
-    background: #4d4d4d; /* Darker background color */
-    padding: 2em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    width: 90%; /* Adjusted for mobile */
-    max-width: 800px;
-    box-sizing: border-box;
-    margin: 0 auto; /* Center the container */
-}
-
-h1 {
-    margin-bottom: 1em;
-    font-size: 2em;
-    color: #ff6666; /* Pastel red */
 }
 
 .input-group {
-    display: flex;
-    flex-direction: column; /* Stack inputs on mobile */
-    align-items: center;
-    margin-bottom: 1em;
+    margin: 20px 0;
 }
 
 input[type="text"] {
-    padding: 0.5em;
-    font-size: 1em;
-    border: 2px solid #ff6666; /* Pastel red border */
-    border-radius: 4px;
-    outline: none;
-    margin-bottom: 0.5em; /* Spacing between inputs */
-    width: 100%;
-    max-width: 300px;
-    background-color: #333; /* Darker input background */
-    color: #e6cccc; /* Pastel red text color */
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
 }
 
 button {
-    padding: 0.5em 1em;
-    font-size: 1em;
-    color: white;
-    background-color: #ff6666; /* Pastel red */
-    border: none;
-    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%; /* Full width on mobile */
-    max-width: 300px; /* Limit width on larger screens */
-}
-
-button:hover {
-    background-color: #ff3333; /* Darker pastel red on hover */
 }
 
 .khodam-info {
-    margin-top: 1em;
-    text-align: left; /* Align content to the left */
+    margin-top: 20px;
 }
 
 .khodam-details {
     display: flex;
-    flex-direction: row; /* Side by side layout */
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    text-align: left; /* Align text to the left */
-    gap: 1em; /* Space between image and text */
 }
 
 .khodam-image-container {
     flex: 1;
-    text-align: center; /* Center the image within its container */
 }
 
 .khodam-image {
-    width: 50%; /* Reduce image size to 50% of its container */
-    max-width: 100%; /* Prevent image overflow */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add drop shadow */
-    border-radius: 8px;
-    object-fit: contain;
+    max-width: 150%; /* Increase image size by 50% */
+    height: auto;
+    object-fit: contain; /* Ensure the image fits within the container while maintaining aspect ratio */
 }
 
 .khodam-text {
-    flex: 2;
+    flex: 1;
+    padding: 20px;
 }
 
-.khodam-text p {
-    margin: 0.5em 0;
-    font-size: 1.2em;
-    line-height: 1.4; /* Improve readability */
-}
-
-.khodam-text p.name {
+#khodam_name {
     font-weight: bold;
-    color: #ff6666; /* Pastel red */
+    color: #ff6f61; /* Pastel red color */
 }
 
 /* Loading screen */
@@ -164,7 +117,7 @@ button:hover {
     }
 
     .khodam-image {
-        width: 80%; /* Adjust image size on smaller screens */
+        width: 120%; /* Increase image size by 50% for smaller screens */
         margin-bottom: 1em; /* Add space below the image */
     }
 }
@@ -190,4 +143,17 @@ button:hover {
     .loading-content {
         width: 90%; /* Adjusted width for very small screens */
     }
+}
+
+footer {
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ff6f61; /* Pastel red color for link */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
