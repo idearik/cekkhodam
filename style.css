@@ -60,18 +60,39 @@ button:hover {
 
 .khodam-info {
     margin-top: 1em;
+    text-align: left; /* Align content to the left */
 }
 
-.khodam-info p {
+.khodam-details {
+    display: flex;
+    align-items: center;
+}
+
+.khodam-image-container {
+    flex: 0 0 50%; /* Take up 50% of the container width */
+    margin-right: 1em;
+    text-align: center;
+}
+
+.khodam-image {
+    width: 100%; /* Ensure image fills its container */
+    max-width: 100%; /* Prevent image overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add drop shadow */
+    border-radius: 8px;
+}
+
+.khodam-text {
+    flex: 1; /* Take remaining space */
+}
+
+.khodam-text p {
     margin: 0.5em 0;
     font-size: 1.2em;
 }
 
-.khodam-image {
-    max-width: 80%;
-    height: auto;
-    display: none;
-    margin-bottom: 1em;
+.khodam-text p.name {
+    font-weight: bold;
+    color: #0073e6;
 }
 
 .loading-screen {
