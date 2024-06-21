@@ -1,17 +1,26 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ff6f61; /* Pastel red color for title */
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .container {
     text-align: center;
+    max-width: 80%;
+    margin: auto;
 }
 
 .input-group {
@@ -22,6 +31,10 @@ input[type="text"] {
     padding: 10px;
     font-size: 16px;
     width: 250px;
+    border: 2px solid #ff6f61; /* Pastel red border */
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-radius: 4px;
 }
 
 button {
@@ -29,6 +42,16 @@ button {
     font-size: 16px;
     margin-left: 10px;
     cursor: pointer;
+    background-color: #ff6f61; /* Pastel red background */
+    color: #121212;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+button:hover {
+    background-color: #e65b54;
 }
 
 .khodam-info {
@@ -39,6 +62,10 @@ button {
     display: flex;
     flex-direction: row;
     align-items: center;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
 
 .khodam-image-container {
@@ -46,13 +73,23 @@ button {
 }
 
 .khodam-image {
-    max-width: 100%;
+    max-width: 150%; /* Increase image size by 50% */
     height: auto;
+    object-fit: contain; /* Ensure the image fits within the container while maintaining aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
 
 .khodam-text {
     flex: 1;
     padding: 20px;
+}
+
+#khodam_name {
+    font-weight: bold;
+    color: #ff6f61; /* Pastel red color */
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px #000000;
 }
 
 /* Loading screen */
@@ -62,7 +99,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black overlay */
+    background-color: rgba(18, 18, 18, 0.9); /* Semi-transparent black overlay */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,19 +108,16 @@ button {
 }
 
 .loading-content {
-    background-color: #333; /* Dark loading content background */
+    background-color: #1e1e1e; /* Dark loading content background */
     padding: 2em;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Enhanced box shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Enhanced box shadow */
     max-width: 80%; /* Limit max width of loading content */
     width: 300px; /* Fixed width for loading content on small screens */
-    color: white;
-}
-
-.loading-content p {
+    color: #ff6f61; /* Pastel red color */
     font-size: 1.2em;
-    margin-bottom: 1em;
+    text-shadow: 1px 1px 2px #000000;
 }
 
 @keyframes fadeIn {
@@ -110,7 +144,7 @@ button {
     }
 
     .khodam-image {
-        width: 80%; /* Adjust image size on smaller screens */
+        width: 120%; /* Increase image size by 50% for smaller screens */
         margin-bottom: 1em; /* Add space below the image */
     }
 }
@@ -136,4 +170,17 @@ button {
     .loading-content {
         width: 90%; /* Adjusted width for very small screens */
     }
+}
+
+footer {
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ff6f61; /* Pastel red color for link */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
