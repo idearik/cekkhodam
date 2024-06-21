@@ -7,13 +7,19 @@
     <title>Khodam Finder</title>
 </head>
 <body>
-    <div class="container">
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <p>Kami sedang memeriksa khodam Anda secara online</p>
+        </div>
+    </div>
+    <div class="container" id="main-content">
         <h1>Khodam Finder</h1>
         <div class="input-group">
             <input type="text" id="nameInput" placeholder="Enter Name">
             <button onclick="getKhodam()" id="getKhodamButton">Get Khodam</button>
         </div>
         <div class="khodam-info">
+            <img id="khodam_image" src="" alt="" class="khodam-image">
             <p id="khodam_name"></p>
             <p id="khodam_description"></p>
         </div>
