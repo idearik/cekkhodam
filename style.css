@@ -91,6 +91,7 @@ button:hover {
     max-width: 100%; /* Prevent image overflow */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add drop shadow */
     border-radius: 8px;
+    object-fit: contain;
 }
 
 .khodam-text {
