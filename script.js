@@ -58,7 +58,7 @@ function getKhodam() {
             const randomIndex = Math.floor(Math.random() * khodamList.length);
             const randomKhodam = khodamList[randomIndex];
 
-            khodam_name.innerHTML = randomKhodam.name;
+            khodam_name.innerHTML = `<span class="name">${randomKhodam.name}</span>`;
             khodam_description.innerHTML = randomKhodam.description;
             khodam_image.src = randomKhodam.image;
             khodam_image.alt = randomKhodam.name;
@@ -71,7 +71,7 @@ function getKhodam() {
         khodam_description.innerHTML = "";
         khodam_image.style.display = "none";
 
-        alert("Please enter name!!");
+        alert("Masukan Nama Lengkapmu!!");
     }
 }
 
