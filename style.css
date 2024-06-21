@@ -9,6 +9,7 @@ body {
     height: 100vh;
     background-color: #121212;
     color: #e0e0e0;
+    text-align: center;
 }
 
 h1 {
@@ -21,6 +22,7 @@ h1 {
     text-align: center;
     max-width: 80%;
     margin: auto;
+    padding: 20px;
 }
 
 .input-group {
@@ -30,7 +32,8 @@ h1 {
 input[type="text"] {
     padding: 10px;
     font-size: 16px;
-    width: 250px;
+    width: 100%;
+    max-width: 300px;
     border: 2px solid #ff6f61; /* Pastel red border */
     background-color: #1e1e1e;
     color: #e0e0e0;
@@ -60,7 +63,7 @@ button:hover {
 
 .khodam-details {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     background-color: #1e1e1e;
     padding: 20px;
@@ -70,12 +73,13 @@ button:hover {
 
 .khodam-image-container {
     flex: 1;
+    width: 100%;
 }
 
 .khodam-image {
-    max-width: 150%; /* Increase image size by 50% */
+    max-width: 100%; /* Ensure the image fits within the container while maintaining aspect ratio */
     height: auto;
-    object-fit: contain; /* Ensure the image fits within the container while maintaining aspect ratio */
+    object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
@@ -165,6 +169,7 @@ button:hover {
 
     button {
         max-width: none; /* Full width button on smaller screens */
+        margin-top: 10px; /* Add space above the button */
     }
 
     .loading-content {
