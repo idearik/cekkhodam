@@ -8,6 +8,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    box-sizing: border-box;
+    padding: 20px; /* Add padding to body */
 }
 
 .container {
@@ -72,20 +74,27 @@ button:hover {
 
 .khodam-details {
     display: flex;
-    flex-direction: column; /* Stack image and text on mobile */
+    flex-direction: row; /* Side by side layout */
     align-items: center;
-    text-align: center; /* Center text on mobile */
+    justify-content: center;
+    text-align: left; /* Align text to the left */
+    gap: 1em; /* Space between image and text */
 }
 
 .khodam-image-container {
-    margin-bottom: 1em; /* Spacing between image and text */
+    flex: 1;
+    text-align: center; /* Center the image within its container */
 }
 
 .khodam-image {
-    width: 100%; /* Ensure image fills its container */
+    width: 50%; /* Reduce image size to 50% of its container */
     max-width: 100%; /* Prevent image overflow */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add drop shadow */
     border-radius: 8px;
+}
+
+.khodam-text {
+    flex: 2;
 }
 
 .khodam-text p {
@@ -147,6 +156,15 @@ button:hover {
 
     .loading-content {
         max-width: 90%; /* Adjust max width for tablets */
+    }
+
+    .khodam-details {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+    }
+
+    .khodam-image {
+        width: 80%; /* Adjust image size on smaller screens */
+        margin-bottom: 1em; /* Add space below the image */
     }
 }
 
