@@ -15,13 +15,19 @@
     <div class="container" id="main-content">
         <h1>Khodam Finder</h1>
         <div class="input-group">
-            <input type="text" id="nameInput" placeholder="Enter Name">
-            <button onclick="getKhodam()" id="getKhodamButton">Get Khodam</button>
+            <input type="text" id="nameInput" placeholder="Masukan Nama Lengkapmu">
+            <button onclick="getKhodam()" id="getKhodamButton">Cek Khodam</button>
         </div>
         <div class="khodam-info">
-            <img id="khodam_image" src="" alt="" class="khodam-image">
-            <p id="khodam_name"></p>
-            <p id="khodam_description"></p>
+            <div class="khodam-details">
+                <div class="khodam-image-container">
+                    <img id="khodam_image" src="" alt="" class="khodam-image">
+                </div>
+                <div class="khodam-text">
+                    <p id="khodam_name"></p>
+                    <p id="khodam_description"></p>
+                </div>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
